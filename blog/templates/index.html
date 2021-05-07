@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}Sesión 3{% endblock %}
+{% block content %}
+
+<div class="modal">
+    <div class="modal-main">
+        <div class="row">
+          <div class="c-3-lg c-3-md c-1-sm close-modal"></div>
+          <div class="c-6-lg c-6-md c-10-sm c-12-xs close-modal">
+            <div class="modal-card" id="loading">
+              <div class="preloader"></div>
+              <span class="tag">Cargando...</span>
+            </div>
+          </div>
+          <div class="c-3-lg c-3-md c-1-sm close-modal"></div>
+        </div>
+      </div>
+    </div>
+
+    <header>
+        <h1>Procesado de Imágenes con Python - Grupo 3</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <div>
+                <h2><span>Suba una imagen</span></h2>
+            </div>
+            <div class="image-container">
+                <img id="preview">
+            </div>
+            <div class="upload-image">
+                <form action="#" method="post" enctype="multipart/form-data" id="Formulario">
+                    <!--input type="file" name="avatar" id="avatar"-->
+                    <img id="preview">
+                </form>
+                <span class="up-img">
+                    <input type="file" id="archivo">
+                </span>
+                <a href="#" id="upload-image">↑</a>
+            </div>
+        </section>
+    </main>
+
+    <main>
+        <section class="card">
+            <h2><span>Seleccione el tipo de procesado:</span>
+                <ol>
+                    <label>
+                        <select name="menu">
+                            <option> -SELECCIONE- </option>
+                            <option value="1">Invertir Colores</option>
+                            <option value="2">Escalas Grises</option>
+                            <option value="3">Resaltar Luces</option>
+                            <option value="4">Contraste</option>
+                            <option value="5">Espejo</option>
+                            <option value="6">Cambiar Tamaño</option>
+                            <option value="7">Disminuir Nitidez</option>
+                            <option value="8">Op. Identidad</option>
+                            <option value="9">Op. Inverso</option>
+                            <option value="10">Op. Umbral</option>
+                            <option value="11">Op. Umbral Inverso</option>
+                            <option value="12">Op. Umbral Binario</option>
+                            <option value="13">Op. Umbral Binario Invertido</option>
+                            <option value="14">Histograma</option>
+                            <!--option value="15">Binarización</option>
+                            <option value="16">Adelgazamiento</option>
+                            <option value="17">Minucia</option-->
+                        </select>
+                    </label>
+                </ol>
+            </h2>
+            <div class="image-container">
+              <img src="" alt="">
+            </div>
+            <div class="upload-image">
+                <a href="xd.jpg" id="upload-image" download="xdxd.jpg">↓</a>
+            </div>
+        </section>
+    </main>
+
+{% endblock %}
